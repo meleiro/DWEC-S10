@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Servicios y APIs en Frontend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Usuarios (API + Mock)</h1>
+
+    <!-- Zona de mensajes (errores, info, etc.) -->
+    <div id="message" class="message"></div>
+
+    <!-- Lista de usuarios -->
+    <section>
+      <h2>Listado</h2>
+      <ul id="user-list" class="user-list">
+        <!-- Se rellena desde app.js -->
+      </ul>
+    </section>
+
+    <!-- Formulario para añadir usuario -->
+    <section>
+      <h2>Nuevo usuario</h2>
+      <form id="user-form" class="user-form">
+        <label>
+          Nombre:
+          <input type="text" id="name" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" id="email" required />
+        </label>
+        <button type="submit">Crear usuario</button>
+      </form>
+    </section>
+
+    <section class="info">
+      <h2>Notas para la clase</h2>
+      <ul>
+        <li>Servicio JS reutilizable: <code>apiService.js</code></li>
+        <li>Gestión de errores centralizada en una función</li>
+        <li>Simulación local cuando la API falla</li>
+        <li>El mismo servicio se puede usar desde React (ver código App.jsx)</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- IMPORTANTE: usamos módulos ES6 -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
